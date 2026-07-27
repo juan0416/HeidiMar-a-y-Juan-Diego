@@ -1,0 +1,17 @@
+Algoritmo tanqueindustrial
+	Escribir " ingrese el nivel inicial del tanque :"
+	leer nivel 
+	hacer  
+		Escribir " litros que ingresan: "
+		leer litros 
+	 nivel =nivel +litros
+		si nivel > 100 Entonces
+			nivel = 100
+		FinSi
+		Escribir " Nivel actual : " , nivel 
+	mientras Que nivel < 100 
+	 Escribir "TANQUE LLENO desconectando bomba" 
+		
+		
+	
+FinAlgoritmo
