@@ -1,0 +1,26 @@
+Algoritmo puntodeventa
+Definir precio, cantidad, subtotal, decuento, total Como Real
+Definir iva, totalpagar como real 
+total = 0
+Hacer
+	escribir " ingresar el precio del producto ( 0 para terminar ):"
+	leer precio 
+	si precio > 0 Entonces
+		Escribir " ingrese la cantidad comprada : "
+		leer cantidad 
+		subtotal = precio * cantidad 
+		descuento = 0
+		si subtotal > 100000 Entonces
+			descuento = subtotal * 0.10
+			subtotal = subtotal -  descuento 
+		FinSi
+		total = total + subtotal 
+		escribir " subtotal del producto : $" , subtotal
+	FinSi
+ Mientras Que precio <> 0 
+  iva = total * 0.19
+  totalpagar = total + iva 
+ 
+  Escribir " total acumulado : $ " , total
+  Escribir " iva ( 19% ) :$" totalpagar 
+FinAlgoritmo
