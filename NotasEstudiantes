@@ -1,0 +1,47 @@
+Algoritmo notasestudiantes
+	Definir nota,sumaNotas,promedio, porcentaje Como Real
+	Definir aprobados, reprobados, totalEstudiantes, continuar Como Entero
+	
+	sumaNotas = 0 
+	aprobados = 0
+	reprobados = Nota 
+	Hacer
+	totalEstudiantes = 0
+    Escribir "Ingrese la nota del estudiante 0.0 y 5.0"
+    Leer nota 
+    Si nota < 0 o nota > 5 entonces
+		Escribir "Error: la nota debe estar entre 0.0 y 5.0"
+	SiNo
+		
+		sumaNotas = sumaNotas + nota
+		totalEstudiantes = totalEstudiantes + 1
+		Si nota >= 3.0 Entonces
+			aprobados = aprobados + 1
+		SiNo
+			reprobados = reprobados + 1
+			
+		FinSi
+		Escribir "Nota registrada correctamente"
+		
+	FinSi
+	
+	Escribir "¿Desea ingresar la nota de otro estudiante?"
+	Escribir "1 = Si"
+	Escribir "0 = No"
+	Leer continuar
+	
+Mientras Que continuar = 1
+Si totalEstudiantes > 0 Entonces
+	promedio = sumaNotas / totalEstudiantes
+	porcentaje = (aprobados * 100 ) / totalEstudiantes
+	Escribir " total de estudiantes evaluados " , totalEstudiantes
+	Escribir " aprobados " , aprobados
+	Escribir " reprobados " reprobados
+	Escribir " porcentaje de aprobados : ", porcentaje, "%" 
+	Escribir " nota promedio del grupo :", promedio  
+SiNo
+	Escribir " No se registraron notas validas. "
+	
+FinSi
+	
+FinAlgoritmo
